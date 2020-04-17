@@ -1,0 +1,257 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Hack, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #202020;
+}
+
+li {
+    display: inline-block;
+}
+
+.whitespace {
+    width: 100%;
+    height: 100vh;
+}
+
+.whitespace-2 {
+    height: 700px;
+}
+
+.img {
+    filter: grayscale(100%);
+    z-index: -1;
+}
+
+.text-1 {
+    z-index: 2;
+    font-size: 200px;
+    margin-left: -250px;
+    position: relative;
+}
+
+.text h1 {
+    font-size: 90px;
+}
+
+
+/*
+.hero-image {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    filter: grayscale(100%);
+    background: url(Images/background2.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.parralax-el {
+    justify-content: center;
+    align-content: center;
+    width: 60%;
+    height: 100vh;
+    position: absolute;
+    filter: grayscale(100%);
+    background: url(Images/team-3.png) no-repeat 50% 50%;
+    background-size: cover;
+    top: 20%;
+}
+
+
+
+.clouds {
+    position: absolute;
+    width: 100%;
+    filter: grayscale(100%);
+    height: 100vh;
+    background: url(Images/clouds.png) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.content {
+    margin: 0 auto;
+    width: 80%;
+    font-family: Helvetica;
+    padding: 80px 0;
+}
+
+.content h1 {
+    font-size: 42px;
+    font-family: Helvetica;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.content p {
+    line-height: 40px;
+    text-align: center;
+}
+*/
+
+.section-team {
+    margin: 100px;
+}
+
+.cardd {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    height: 320px;
+    transition: all 1s;
+    position: relative;
+}
+
+.cardd h2 {
+    color: #FFF;
+    font-family: Hack, Helvetica, sans-serif;
+    font-size: 30px;
+    margin: 50px 5px 4px 4px;
+}
+
+.cardd h2:before {
+    position: absolute;
+    content: "";
+    top: 50px;
+    left: -2px;
+    width: 2px;
+    height: 22px;
+    background: #FFF;
+    display: block;
+}
+
+.cardd p {
+    margin-bottom: 70px;
+    color: grey;
+    font-family: sans-serif;
+    font-size: 15px;
+    margin-left: 7px;
+}
+
+.cardd a {
+    color: lightgrey;
+    font-weight: bolder;
+    text-transform: uppercase;
+    transition: all .4s;
+}
+
+.cardd a:hover {
+    color: gray;
+}
+
+.card1 {
+    position: relative;
+}
+
+.card1:hover:before {}
+
+.card2 {
+    position: relative;
+}
+
+.card2:hover:before {
+    transition: 1s !important;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 280px;
+    z-index: -1;
+    animation: anim 3.2s ease-in-out;
+}
+
+.card3 {
+    position: relative;
+}
+
+.card3:hover:before {
+    transition: 1s !important;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 280px;
+    z-index: -1;
+    animation: anim 3.2s ease-in-out;
+}
+
+.card4 {
+    position: relative;
+}
+
+.card4:hover:before {
+    transition: 1s !important;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 280px;
+    z-index: -1;
+    animation: anim 3.2s ease-in-out;
+}
+
+.card1.cardd:hover::before {
+    background: url(Images/Pivot_phone.jpg);
+    filter: grayscale(90%);
+    left: 150px;
+    transition: .3s !important;
+    content: "";
+    position: absolute;
+    top: -10%;
+    width: 280px;
+    opacity: 0.6;
+    height: 280px;
+    z-index: -1;
+    animation: anim .2s ease-in-out;
+}
+
+.card2.cardd:hover::before {
+    background: url(Images/Pivot_phone.jpg);
+}
+
+.card3.cardd:hover::before {
+    background: url(Images/Pivot_phone.jpg);
+}
+
+.card4.cardd:hover::before {
+    background: url(Images/Pivot_phone.jpg);
+}
+
+@keyframes anim {
+    0% {
+        opacity: 0;
+        left: 70px;
+    }
+    20% {
+        opacity: 0.9;
+        left: 100px;
+    }
+    100% {
+        opacity: 0.8;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    a {
+        display: none !important;
+    }
+    .cardd {
+        height: 100px;
+    }
+    .row h5 {
+        margin: 28px 0 2px 4px;
+    }
+    .row p {
+        margin-bottom: 10px !important;
+    }
+    .row h5::before {
+        top: 26px;
+    }
+    .cardd:hover::before {
+        display: none;
+    }
+}
